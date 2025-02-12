@@ -10,10 +10,10 @@ const Index = () => {
       <section className="relative h-[80vh] flex items-center justify-center bg-gradient-to-r from-white to-amber-50">
         <div className="container mx-auto px-4 text-center">
           <h1 className="text-4xl md:text-6xl font-bold mb-6 text-amber-900">
-            Luxury Furnished Rentals & Corporate Housing
+            INFINITE SUITES
           </h1>
           <p className="text-xl md:text-2xl mb-8 text-amber-800">
-            Your Home Away From Home for Extended Stays & Corporate Relocations
+            Premier Furnished Rentals & Corporate Housing Solutions
           </p>
           <Button
             className="bg-amber-600 hover:bg-amber-700 text-white px-8 py-6 text-lg"
@@ -27,7 +27,7 @@ const Index = () => {
       <section className="py-16 bg-white">
         <div className="container mx-auto px-4">
           <h2 className="text-3xl font-bold text-center mb-12 text-amber-900">
-            Why Choose Our Services
+            The INFINITE SUITES Difference
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             <Card className="border-amber-100 hover:shadow-lg transition-shadow">
@@ -85,10 +85,10 @@ const Index = () => {
       <section className="py-16 bg-amber-50">
         <div className="container mx-auto px-4 text-center">
           <h2 className="text-3xl font-bold mb-6 text-amber-900">
-            Ready to Find Your Perfect Stay?
+            Experience Infinite Possibilities
           </h2>
           <p className="text-xl mb-8 text-amber-800">
-            Browse our selection of premium furnished rentals and corporate housing options
+            Discover INFINITE SUITES&apos; premium furnished rentals and corporate housing solutions
           </p>
           <Button
             className="bg-amber-600 hover:bg-amber-700 text-white px-8 py-6 text-lg"
