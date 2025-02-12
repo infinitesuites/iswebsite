@@ -59,7 +59,10 @@ const Index = () => {
                   Luxury furnished apartments near major studios and entertainment companies. 
                   Perfect for entertainment industry professionals and corporate relocations.
                 </p>
-                <Button className="bg-amber-600 hover:bg-amber-700 text-white">
+                <Button 
+                  className="bg-amber-600 hover:bg-amber-700 text-white"
+                  onClick={() => window.location.href = '/properties/burbank'}
+                >
                   Explore Burbank Properties
                 </Button>
               </CardContent>
@@ -71,7 +74,10 @@ const Index = () => {
                   Premium furnished rentals near the port and business district. 
                   Ideal for maritime professionals and extended business stays.
                 </p>
-                <Button className="bg-amber-600 hover:bg-amber-700 text-white">
+                <Button 
+                  className="bg-amber-600 hover:bg-amber-700 text-white"
+                  onClick={() => window.location.href = '/properties/long-beach'}
+                >
                   Explore Long Beach Properties
                 </Button>
               </CardContent>
