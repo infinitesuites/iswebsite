@@ -64,6 +64,35 @@ const BurbankProperties = () => {
             </CardContent>
           </Card>
         </div>
+
+        {/* SEO Content Section */}
+        <div className="prose max-w-none mb-16">
+          <h2 className="text-3xl font-semibold mb-6 text-amber-900">
+            Furnished Rentals in Burbank, CA: Your Home Away From Home
+          </h2>
+          <div className="text-amber-800 space-y-4">
+            <p>
+              Looking for furnished rentals near you in Burbank? INFINITE SUITES offers premium furnished apartments in the heart of the entertainment capital. Our Burbank properties provide the perfect blend of luxury, convenience, and comfort for entertainment industry professionals and corporate travelers.
+            </p>
+            <p>
+              Located just minutes from major studios including Warner Bros., Disney, and Universal, our furnished rentals in Burbank offer an ideal living solution for those working in the entertainment industry. Each property comes fully equipped with high-end furnishings, modern appliances, and all the amenities you need to feel at home.
+            </p>
+            <h3 className="text-2xl font-semibold mt-8 mb-4 text-amber-900">
+              Why Choose Our Burbank Furnished Rentals?
+            </h3>
+            <ul className="list-disc pl-6 space-y-2">
+              <li>Prime location near major studios and entertainment companies</li>
+              <li>Fully furnished with premium furniture and appliances</li>
+              <li>Flexible lease terms for short and long-term stays</li>
+              <li>Professional cleaning and maintenance services</li>
+              <li>24/7 customer support for all residents</li>
+              <li>High-speed internet and smart home features included</li>
+            </ul>
+            <p>
+              Whether you're relocating for a production project, need temporary housing during a home renovation, or seeking an extended stay solution in Burbank, our furnished rentals provide the perfect home base. With INFINITE SUITES, you'll find the ideal furnished apartment near you, combining the comfort of home with the convenience of a prime Burbank location.
+            </p>
+          </div>
+        </div>
       </div>
     </div>
   );
