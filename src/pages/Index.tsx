@@ -1,4 +1,3 @@
-
 import { Building2, MapPin, Briefcase, Calendar, House, Hotel } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
@@ -35,13 +34,14 @@ const Index = () => {
       <section className="relative h-[80vh] flex items-center justify-center bg-gradient-to-r from-white to-amber-50 mt-16">
         <div className="container mx-auto px-4 text-center">
           <h1 className="text-4xl md:text-6xl font-bold mb-6 text-amber-900">
-            INFINITE SUITES
+            Live Without Limits
           </h1>
           <p className="text-xl md:text-2xl mb-8 text-amber-800">
-            Premier Furnished Rentals & Corporate Housing Solutions in Burbank and Long Beach, CA
+            Discover Luxury Living in Southern California's Most Sought-After Locations.<br />
+            Your Home Away From Home Awaits.
           </p>
           <Button
-            className="bg-amber-600 hover:bg-amber-700 text-white px-8 py-6 text-lg"
+            className="bg-[#bf9b30] hover:bg-[#a68628] text-white px-8 py-6 text-lg"
           >
             View Available Properties
           </Button>
@@ -157,7 +157,7 @@ const Index = () => {
             Discover INFINITE SUITES&apos; premium furnished rentals and corporate housing solutions in Burbank and Long Beach
           </p>
           <Button
-            className="bg-amber-600 hover:bg-amber-700 text-white px-8 py-6 text-lg"
+            className="bg-[#bf9b30] hover:bg-[#a68628] text-white px-8 py-6 text-lg"
           >
             Contact Us Today
           </Button>
@@ -165,20 +165,34 @@ const Index = () => {
       </section>
 
       {/* Footer */}
-      <footer className="bg-amber-900 text-white py-12">
+      <footer className="bg-[#bf9b30] text-white py-12">
         <div className="container mx-auto px-4">
           <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
             <div>
               <h3 className="font-bold text-xl mb-4">INFINITE SUITES</h3>
-              <p className="text-amber-100">
+              <p className="text-white">
                 Premium furnished rentals and corporate housing solutions in Southern California
               </p>
             </div>
             <div>
               <h4 className="font-bold mb-4">Locations</h4>
               <ul className="space-y-2">
-                <li>Burbank, CA</li>
-                <li>Long Beach, CA</li>
+                <li>
+                  <a 
+                    href="/properties/burbank" 
+                    className="hover:text-amber-100 transition-colors"
+                  >
+                    Burbank, CA
+                  </a>
+                </li>
+                <li>
+                  <a 
+                    href="/properties/long-beach" 
+                    className="hover:text-amber-100 transition-colors"
+                  >
+                    Long Beach, CA
+                  </a>
+                </li>
               </ul>
             </div>
             <div>
@@ -193,12 +207,11 @@ const Index = () => {
             <div>
               <h4 className="font-bold mb-4">Contact</h4>
               <ul className="space-y-2">
-                <li>Phone: (555) 123-4567</li>
-                <li>Email: info@infinitesuites.com</li>
+                <li>Email: stay@infinitesuites.com</li>
               </ul>
             </div>
           </div>
-          <div className="border-t border-amber-800 mt-8 pt-8 text-center">
+          <div className="border-t border-amber-100 mt-8 pt-8 text-center">
             <p>&copy; {new Date().getFullYear()} INFINITE SUITES. All rights reserved.</p>
           </div>
         </div>
