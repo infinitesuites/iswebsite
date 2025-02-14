@@ -1,5 +1,14 @@
 
 import { Button } from "@/components/ui/button";
+import {
+  NavigationMenu,
+  NavigationMenuContent,
+  NavigationMenuItem,
+  NavigationMenuLink,
+  NavigationMenuList,
+  NavigationMenuTrigger,
+} from "@/components/ui/navigation-menu";
+import { Link } from "react-router-dom";
 
 const Header = () => {
   return (
@@ -12,9 +21,37 @@ const Header = () => {
             className="h-12"
           />
         </div>
-        <nav className="hidden md:flex space-x-8">
+        <nav className="hidden md:flex items-center space-x-8">
           <a href="#properties" className="text-amber-900 hover:text-amber-600">Properties</a>
-          <a href="/services" className="text-amber-900 hover:text-amber-600">Services</a>
+          <NavigationMenu>
+            <NavigationMenuList>
+              <NavigationMenuItem>
+                <NavigationMenuTrigger className="text-amber-900 hover:text-amber-600">
+                  Services
+                </NavigationMenuTrigger>
+                <NavigationMenuContent>
+                  <div className="grid gap-3 p-6 w-[400px] bg-white">
+                    <Link to="/services/corporate-housing" className="block p-3 hover:bg-amber-50 rounded-lg">
+                      <div className="text-lg font-semibold text-amber-900">Corporate Housing</div>
+                      <p className="text-sm text-amber-700">Premium furnished housing for business professionals</p>
+                    </Link>
+                    <Link to="/services/furnished-rentals" className="block p-3 hover:bg-amber-50 rounded-lg">
+                      <div className="text-lg font-semibold text-amber-900">Furnished Rentals</div>
+                      <p className="text-sm text-amber-700">Fully equipped luxury apartments and homes</p>
+                    </Link>
+                    <Link to="/services/insurance-relocations" className="block p-3 hover:bg-amber-50 rounded-lg">
+                      <div className="text-lg font-semibold text-amber-900">Insurance Relocations</div>
+                      <p className="text-sm text-amber-700">Temporary housing for insurance claims</p>
+                    </Link>
+                    <Link to="/services/extended-stays" className="block p-3 hover:bg-amber-50 rounded-lg">
+                      <div className="text-lg font-semibold text-amber-900">Extended Stays</div>
+                      <p className="text-sm text-amber-700">Long-term furnished accommodations</p>
+                    </Link>
+                  </div>
+                </NavigationMenuContent>
+              </NavigationMenuItem>
+            </NavigationMenuList>
+          </NavigationMenu>
           <a href="/faq" className="text-amber-900 hover:text-amber-600">FAQs</a>
           <a href="#contact" className="text-amber-900 hover:text-amber-600">Contact</a>
         </nav>
