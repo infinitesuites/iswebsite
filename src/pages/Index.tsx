@@ -22,7 +22,10 @@ const Index = () => {
             <a href="#locations" className="text-amber-900 hover:text-amber-600">Locations</a>
             <a href="#contact" className="text-amber-900 hover:text-amber-600">Contact</a>
           </nav>
-          <Button className="bg-amber-600 hover:bg-amber-700 text-white">
+          <Button 
+            className="bg-amber-600 hover:bg-amber-700 text-white"
+            onClick={() => window.location.href = '/contact'}
+          >
             Book Now
           </Button>
         </div>
