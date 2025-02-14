@@ -17,8 +17,8 @@ const Index = () => {
           </div>
           <nav className="hidden md:flex space-x-8">
             <a href="#properties" className="text-amber-900 hover:text-amber-600">Properties</a>
-            <a href="#services" className="text-amber-900 hover:text-amber-600">Services</a>
-            <a href="#locations" className="text-amber-900 hover:text-amber-600">Locations</a>
+            <a href="/services" className="text-amber-900 hover:text-amber-600">Services</a>
+            <a href="/faq" className="text-amber-900 hover:text-amber-600">FAQs</a>
             <a href="#contact" className="text-amber-900 hover:text-amber-600">Contact</a>
           </nav>
           <Button 
@@ -196,12 +196,23 @@ const Index = () => {
               </ul>
             </div>
             <div>
-              <h4 className="font-bold mb-4">Services</h4>
+              <h4 className="font-bold mb-4">Quick Links</h4>
               <ul className="space-y-2">
-                <li>Corporate Housing</li>
-                <li>Furnished Rentals</li>
-                <li>Insurance Relocations</li>
-                <li>Extended Stays</li>
+                <li>
+                  <a href="/services" className="hover:text-amber-100 transition-colors">
+                    Services
+                  </a>
+                </li>
+                <li>
+                  <a href="/faq" className="hover:text-amber-100 transition-colors">
+                    FAQs
+                  </a>
+                </li>
+                <li>
+                  <a href="/contact" className="hover:text-amber-100 transition-colors">
+                    Contact Us
+                  </a>
+                </li>
               </ul>
             </div>
             <div>
