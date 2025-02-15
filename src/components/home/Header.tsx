@@ -11,6 +11,11 @@ import {
 import { Link } from "react-router-dom";
 
 const Header = () => {
+  const handlePropertiesClick = (e: React.MouseEvent) => {
+    e.preventDefault();
+    window.location.href = '/#locations';
+  };
+
   return (
     <header className="fixed w-full top-0 z-50 bg-white shadow-sm">
       <div className="container mx-auto px-4 py-4 flex items-center justify-between">
@@ -22,7 +27,13 @@ const Header = () => {
           />
         </div>
         <nav className="hidden md:flex items-center space-x-8">
-          <a href="#locations" className="text-amber-900 hover:text-amber-600">Properties</a>
+          <a 
+            href="/#locations" 
+            onClick={handlePropertiesClick}
+            className="text-amber-900 hover:text-amber-600"
+          >
+            Properties
+          </a>
           <NavigationMenu>
             <NavigationMenuList>
               <NavigationMenuItem>
