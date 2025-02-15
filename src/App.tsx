@@ -9,6 +9,10 @@ import BurbankProperties from "./pages/BurbankProperties";
 import LongBeachProperties from "./pages/LongBeachProperties";
 import ContactForm from "./pages/ContactForm";
 import Services from "./pages/Services";
+import CorporateHousing from "./pages/services/CorporateHousing";
+import FurnishedRentals from "./pages/services/FurnishedRentals";
+import InsuranceRelocations from "./pages/services/InsuranceRelocations";
+import ExtendedStays from "./pages/services/ExtendedStays";
 import FAQ from "./pages/FAQ";
 import Blog from "./pages/Blog";
 import NotFound from "./pages/NotFound";
@@ -27,6 +31,10 @@ const App = () => (
           <Route path="/properties/long-beach" element={<LongBeachProperties />} />
           <Route path="/contact" element={<ContactForm />} />
           <Route path="/services" element={<Services />} />
+          <Route path="/services/corporate-housing" element={<CorporateHousing />} />
+          <Route path="/services/furnished-rentals" element={<FurnishedRentals />} />
+          <Route path="/services/insurance-relocations" element={<InsuranceRelocations />} />
+          <Route path="/services/extended-stays" element={<ExtendedStays />} />
           <Route path="/faq" element={<FAQ />} />
           <Route path="/blog" element={<Blog />} />
           <Route path="*" element={<NotFound />} />
