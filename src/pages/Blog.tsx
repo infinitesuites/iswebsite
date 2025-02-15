@@ -3,6 +3,7 @@ import Header from "@/components/home/Header";
 import Footer from "@/components/home/Footer";
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
+import { Link } from "react-router-dom";
 
 const Blog = () => {
   const blogPosts = [
@@ -23,6 +24,24 @@ const Blog = () => {
       excerpt: "Compare the benefits of corporate housing and extended hotel stays for your business trip to Southern California.",
       date: "2024-03-05",
       slug: "corporate-housing-vs-hotels"
+    },
+    {
+      title: "Tech Professional's Guide to Extended Stays in Southern California",
+      excerpt: "Essential tips for tech professionals relocating to SoCal, including workspace setups and networking opportunities.",
+      date: "2024-03-01",
+      slug: "tech-professional-guide"
+    },
+    {
+      title: "Maximizing Your Business Trip: Long-Term vs Short-Term Rentals",
+      excerpt: "A comprehensive cost-benefit analysis of different accommodation options for business travelers.",
+      date: "2024-02-25",
+      slug: "business-trip-accommodation-guide"
+    },
+    {
+      title: "Remote Work from Paradise: Setting Up Your Home Office in Long Beach",
+      excerpt: "How to create the perfect remote work environment in your furnished rental with oceanfront views.",
+      date: "2024-02-20",
+      slug: "remote-work-long-beach"
     }
   ];
 
@@ -49,12 +68,11 @@ const Blog = () => {
                   <p className="text-amber-700 mb-6">
                     {post.excerpt}
                   </p>
-                  <Button 
-                    className="bg-amber-600 hover:bg-amber-700 text-white"
-                    onClick={() => window.location.href = `/blog/${post.slug}`}
-                  >
-                    Read More
-                  </Button>
+                  <Link to={`/blog/${post.slug}`}>
+                    <Button className="bg-amber-600 hover:bg-amber-700 text-white">
+                      Read More
+                    </Button>
+                  </Link>
                 </CardContent>
               </Card>
             ))}

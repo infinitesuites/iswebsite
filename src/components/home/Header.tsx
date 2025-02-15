@@ -65,7 +65,7 @@ const Header = () => {
           </NavigationMenu>
           <Link to="/blog" className="text-amber-900 hover:text-amber-600">Blog</Link>
           <a href="/faq" className="text-amber-900 hover:text-amber-600">FAQs</a>
-          <a href="#contact" className="text-amber-900 hover:text-amber-600">Contact</a>
+          <Link to="/contact" className="text-amber-900 hover:text-amber-600">Contact</Link>
         </nav>
         <Button 
           className="bg-amber-600 hover:bg-amber-700 text-white"
