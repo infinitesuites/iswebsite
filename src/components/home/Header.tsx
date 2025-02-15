@@ -22,7 +22,7 @@ const Header = () => {
           />
         </div>
         <nav className="hidden md:flex items-center space-x-8">
-          <a href="#properties" className="text-amber-900 hover:text-amber-600">Properties</a>
+          <a href="#locations" className="text-amber-900 hover:text-amber-600">Properties</a>
           <NavigationMenu>
             <NavigationMenuList>
               <NavigationMenuItem>
@@ -52,6 +52,7 @@ const Header = () => {
               </NavigationMenuItem>
             </NavigationMenuList>
           </NavigationMenu>
+          <Link to="/blog" className="text-amber-900 hover:text-amber-600">Blog</Link>
           <a href="/faq" className="text-amber-900 hover:text-amber-600">FAQs</a>
           <a href="#contact" className="text-amber-900 hover:text-amber-600">Contact</a>
         </nav>

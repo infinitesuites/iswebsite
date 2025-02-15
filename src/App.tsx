@@ -10,6 +10,7 @@ import LongBeachProperties from "./pages/LongBeachProperties";
 import ContactForm from "./pages/ContactForm";
 import Services from "./pages/Services";
 import FAQ from "./pages/FAQ";
+import Blog from "./pages/Blog";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -27,6 +28,7 @@ const App = () => (
           <Route path="/contact" element={<ContactForm />} />
           <Route path="/services" element={<Services />} />
           <Route path="/faq" element={<FAQ />} />
+          <Route path="/blog" element={<Blog />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
       </BrowserRouter>

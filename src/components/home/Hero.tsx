@@ -1,6 +1,4 @@
 
-import { Button } from "@/components/ui/button";
-
 const Hero = () => {
   return (
     <section className="relative h-[80vh] flex items-center justify-center bg-gradient-to-r from-white to-amber-50 mt-16">
@@ -12,11 +10,6 @@ const Hero = () => {
           Discover Luxury Living in Southern California's Most Sought-After Locations.<br />
           Your Home Away From Home Awaits.
         </p>
-        <Button
-          className="bg-[#bf9b30] hover:bg-[#a68628] text-white px-8 py-6 text-lg"
-        >
-          View Available Properties
-        </Button>
       </div>
     </section>
   );
