@@ -1,4 +1,3 @@
-
 import { Button } from "@/components/ui/button";
 import {
   NavigationMenu,
@@ -19,13 +18,13 @@ const Header = () => {
   return (
     <header className="fixed w-full top-0 z-50 bg-white shadow-sm">
       <div className="container mx-auto px-4 py-4 flex items-center justify-between">
-        <div className="flex items-center space-x-2">
+        <Link to="/" className="flex items-center space-x-2">
           <img 
             src="/lovable-uploads/57d03305-f946-4e90-900b-d775428407f4.png" 
             alt="INFINITE SUITES Logo" 
             className="h-12"
           />
-        </div>
+        </Link>
         <nav className="hidden md:flex items-center space-x-8">
           <a 
             href="/#locations" 

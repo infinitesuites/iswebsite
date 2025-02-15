@@ -1,4 +1,3 @@
-
 import { useParams } from "react-router-dom";
 import Header from "@/components/home/Header";
 import Footer from "@/components/home/Footer";
@@ -51,7 +50,86 @@ const BlogPost = () => {
         <p>Learn about the best routes to and from the port, parking options, and public transportation alternatives for maritime professionals.</p>
       `
     },
-    // ... add content for other blog posts
+    "corporate-housing-vs-hotels": {
+      title: "Corporate Housing vs. Hotels: Making the Right Choice",
+      date: "2024-03-05",
+      content: `
+        <h2>Choosing Between Corporate Housing and Hotels for Your Business Stay</h2>
+        <p>When planning an extended business trip to Southern California, choosing the right accommodation is crucial for both comfort and productivity. Let's explore the key differences between corporate housing and hotel stays.</p>
+        
+        <h3>Cost Comparison for Extended Stays</h3>
+        <p>For stays longer than 30 days, corporate housing typically offers significant cost savings compared to hotels. Our analysis shows that corporate housing can be 30-50% more cost-effective when factoring in amenities like full kitchens and laundry facilities.</p>
+        
+        <h3>Space and Comfort Considerations</h3>
+        <p>Corporate housing provides substantially more living space, typically offering separate areas for working, relaxing, and sleeping. This separation is crucial for maintaining work-life balance during extended business trips.</p>
+        
+        <h3>Business-Friendly Amenities</h3>
+        <p>Our corporate housing solutions include dedicated workspaces, high-speed internet, and business centers. These amenities are specifically designed for business professionals who need a productive environment.</p>
+        
+        <h3>Location and Accessibility</h3>
+        <p>Strategic locations near business districts in Burbank and Long Beach ensure easy commutes and access to local amenities, making corporate housing ideal for business travelers.</p>
+      `
+    },
+    "tech-professional-guide": {
+      title: "Tech Professional's Guide to Extended Stays in Southern California",
+      date: "2024-03-01",
+      content: `
+        <h2>Essential Guide for Tech Professionals Relocating to Southern California</h2>
+        <p>As a tech professional considering a temporary or permanent move to Southern California, having the right setup and environment is crucial for success.</p>
+        
+        <h3>Optimal Work Setup in Your Furnished Rental</h3>
+        <p>All our units come equipped with high-speed fiber internet, dedicated workspaces, and ergonomic furniture options. We understand the importance of a reliable and comfortable work environment for tech professionals.</p>
+        
+        <h3>Tech Hubs and Networking</h3>
+        <p>Both Burbank and Long Beach have growing tech communities. Learn about local tech meetups, coworking spaces, and networking opportunities in your area.</p>
+        
+        <h3>Digital Nomad-Friendly Amenities</h3>
+        <p>Our properties feature backup internet options, UPS systems, and 24/7 technical support to ensure your work is never interrupted.</p>
+        
+        <h3>Work-Life Balance in SoCal</h3>
+        <p>Discover how to maintain productivity while enjoying Southern California's lifestyle, including nearby fitness centers, outdoor activities, and entertainment options.</p>
+      `
+    },
+    "business-trip-accommodation-guide": {
+      title: "Maximizing Your Business Trip: Long-Term vs Short-Term Rentals",
+      date: "2024-02-25",
+      content: `
+        <h2>Comprehensive Guide to Business Trip Accommodation Options</h2>
+        <p>Understanding the pros and cons of different rental durations can significantly impact your business trip experience and budget.</p>
+        
+        <h3>Financial Analysis</h3>
+        <p>We break down the costs associated with different rental durations, including utilities, amenities, and additional services. Learn how to maximize your corporate housing budget effectively.</p>
+        
+        <h3>Flexibility and Terms</h3>
+        <p>Long-term rentals often offer more flexible terms and better rates, while short-term options provide more agility. We'll help you understand which option best suits your business needs.</p>
+        
+        <h3>Business Travel Policies</h3>
+        <p>Navigate corporate travel policies and expense management with our guide to documentation, billing options, and corporate account services.</p>
+        
+        <h3>Tax Considerations</h3>
+        <p>Understanding the tax implications of different rental durations can help you make an informed decision that benefits both you and your company.</p>
+      `
+    },
+    "remote-work-long-beach": {
+      title: "Remote Work from Paradise: Setting Up Your Home Office in Long Beach",
+      date: "2024-02-20",
+      content: `
+        <h2>Creating the Perfect Remote Work Environment in Long Beach</h2>
+        <p>Long Beach offers an ideal setting for remote workers, combining coastal living with professional amenities. Learn how to optimize your work-from-home setup in our furnished rentals.</p>
+        
+        <h3>Optimal Office Setup</h3>
+        <p>Our Long Beach properties feature dedicated home office spaces with ergonomic furniture, natural lighting, and coastal views to enhance productivity and well-being.</p>
+        
+        <h3>Digital Infrastructure</h3>
+        <p>All our units are equipped with enterprise-grade internet connections, backup power systems, and smart home technology to ensure uninterrupted work capability.</p>
+        
+        <h3>Work-Life Integration</h3>
+        <p>Discover how to balance remote work with Long Beach's outdoor lifestyle, including beach breaks, waterfront dining, and community events.</p>
+        
+        <h3>Remote Work Community</h3>
+        <p>Connect with Long Beach's growing remote work community through local digital nomad meetups, coworking spaces, and networking events.</p>
+      `
+    }
   };
 
   const post = blogPosts[slug as keyof typeof blogPosts];
