@@ -1,4 +1,3 @@
-
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Building2 } from "lucide-react";
@@ -15,6 +14,24 @@ import { useNavigate } from "react-router-dom";
 
 const BurbankProperties = () => {
   const navigate = useNavigate();
+  
+  const propertyImages = {
+    'media-district': [
+      "/src/Images/burbank/media-district/1.jpg",
+      "/src/Images/burbank/media-district/2.jpg",
+      "/src/Images/burbank/media-district/3.jpg"
+    ],
+    'downtown-burbank': [
+      "/src/Images/burbank/downtown-burbank/1.jpg",
+      "/src/Images/burbank/downtown-burbank/2.jpg",
+      "/src/Images/burbank/downtown-burbank/3.jpg"
+    ],
+    'magnolia-park': [
+      "/src/Images/burbank/magnolia-park/1.jpg",
+      "/src/Images/burbank/magnolia-park/2.jpg",
+      "/src/Images/burbank/magnolia-park/3.jpg"
+    ]
+  };
 
   return (
     <div className="min-h-screen bg-white pt-24">
@@ -30,10 +47,10 @@ const BurbankProperties = () => {
             <CardContent className="p-6">
               <Carousel className="w-full mb-4">
                 <CarouselContent>
-                  {[1, 2, 3].map((_, index) => (
+                  {propertyImages['media-district'].map((image, index) => (
                     <CarouselItem key={index}>
                       <img 
-                        src="/placeholder.svg" 
+                        src={image} 
                         alt={`Media District Suite - Image ${index + 1}`} 
                         className="w-full h-48 object-cover rounded"
                       />
@@ -60,10 +77,10 @@ const BurbankProperties = () => {
             <CardContent className="p-6">
               <Carousel className="w-full mb-4">
                 <CarouselContent>
-                  {[1, 2, 3].map((_, index) => (
+                  {propertyImages['downtown-burbank'].map((image, index) => (
                     <CarouselItem key={index}>
                       <img 
-                        src="/placeholder.svg" 
+                        src={image} 
                         alt={`Downtown Burbank Residence - Image ${index + 1}`} 
                         className="w-full h-48 object-cover rounded"
                       />
@@ -90,10 +107,10 @@ const BurbankProperties = () => {
             <CardContent className="p-6">
               <Carousel className="w-full mb-4">
                 <CarouselContent>
-                  {[1, 2, 3].map((_, index) => (
+                  {propertyImages['magnolia-park'].map((image, index) => (
                     <CarouselItem key={index}>
                       <img 
-                        src="/placeholder.svg" 
+                        src={image} 
                         alt={`Magnolia Park Suite - Image ${index + 1}`} 
                         className="w-full h-48 object-cover rounded"
                       />
@@ -117,7 +134,6 @@ const BurbankProperties = () => {
           </Card>
         </div>
 
-        {/* SEO Content Section */}
         <div className="prose max-w-none mb-16">
           <h2 className="text-3xl font-semibold mb-6 text-amber-900">
             Furnished Rentals in Burbank, CA: Your Home Away From Home

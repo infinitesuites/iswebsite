@@ -3,6 +3,13 @@ import Header from "@/components/home/Header";
 import Footer from "@/components/home/Footer";
 import { Button } from "@/components/ui/button";
 import { useParams, useNavigate } from "react-router-dom";
+import {
+  Carousel,
+  CarouselContent,
+  CarouselItem,
+  CarouselNext,
+  CarouselPrevious,
+} from "@/components/ui/carousel";
 
 const PropertyDetail = () => {
   const { location, id } = useParams();
@@ -23,7 +30,11 @@ const PropertyDetail = () => {
         • Secure parking
         • 24/7 building access
         • High-speed internet included`,
-        images: ["/placeholder.svg", "/placeholder.svg", "/placeholder.svg"],
+        images: [
+          "/src/Images/burbank/media-district/1.jpg",
+          "/src/Images/burbank/media-district/2.jpg",
+          "/src/Images/burbank/media-district/3.jpg"
+        ],
         price: "Starting at $4,500/month",
         amenities: ["Full Kitchen", "In-unit Laundry", "High-speed Internet", "Dedicated Workspace", "Parking"]
       },
@@ -148,13 +159,23 @@ const PropertyDetail = () => {
           
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-12">
             <div className="relative">
-              <div className="aspect-video bg-gray-100 rounded-lg overflow-hidden">
-                <img 
-                  src={propertyData.images[0]} 
-                  alt={propertyData.name}
-                  className="w-full h-full object-cover"
-                />
-              </div>
+              <Carousel className="w-full">
+                <CarouselContent>
+                  {propertyData.images.map((image, index) => (
+                    <CarouselItem key={index}>
+                      <div className="aspect-video bg-gray-100 rounded-lg overflow-hidden">
+                        <img 
+                          src={image} 
+                          alt={`${propertyData.name} - Image ${index + 1}`}
+                          className="w-full h-full object-cover"
+                        />
+                      </div>
+                    </CarouselItem>
+                  ))}
+                </CarouselContent>
+                <CarouselPrevious />
+                <CarouselNext />
+              </Carousel>
             </div>
             
             <div>

@@ -1,4 +1,3 @@
-
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Building2, MapPin } from "lucide-react";
@@ -15,6 +14,24 @@ import { useNavigate } from "react-router-dom";
 
 const LongBeachProperties = () => {
   const navigate = useNavigate();
+  
+  const propertyImages = {
+    'downtown-harbor': [
+      "/src/Images/long-beach/downtown-harbor/1.jpg",
+      "/src/Images/long-beach/downtown-harbor/2.jpg",
+      "/src/Images/long-beach/downtown-harbor/3.jpg"
+    ],
+    'shoreline': [
+      "/src/Images/long-beach/shoreline/1.jpg",
+      "/src/Images/long-beach/shoreline/2.jpg",
+      "/src/Images/long-beach/shoreline/3.jpg"
+    ],
+    'belmont-shore': [
+      "/src/Images/long-beach/belmont-shore/1.jpg",
+      "/src/Images/long-beach/belmont-shore/2.jpg",
+      "/src/Images/long-beach/belmont-shore/3.jpg"
+    ]
+  };
 
   return (
     <div className="min-h-screen bg-white pt-24">
@@ -30,10 +47,10 @@ const LongBeachProperties = () => {
             <CardContent className="p-6">
               <Carousel className="w-full mb-4">
                 <CarouselContent>
-                  {[1, 2, 3].map((_, index) => (
+                  {propertyImages['downtown-harbor'].map((image, index) => (
                     <CarouselItem key={index}>
                       <img 
-                        src="/placeholder.svg" 
+                        src={image} 
                         alt={`Downtown Harbor View - Image ${index + 1}`} 
                         className="w-full h-48 object-cover rounded"
                       />
@@ -60,10 +77,10 @@ const LongBeachProperties = () => {
             <CardContent className="p-6">
               <Carousel className="w-full mb-4">
                 <CarouselContent>
-                  {[1, 2, 3].map((_, index) => (
+                  {propertyImages['shoreline'].map((image, index) => (
                     <CarouselItem key={index}>
                       <img 
-                        src="/placeholder.svg" 
+                        src={image} 
                         alt={`Shoreline Executive Suite - Image ${index + 1}`} 
                         className="w-full h-48 object-cover rounded"
                       />
@@ -90,10 +107,10 @@ const LongBeachProperties = () => {
             <CardContent className="p-6">
               <Carousel className="w-full mb-4">
                 <CarouselContent>
-                  {[1, 2, 3].map((_, index) => (
+                  {propertyImages['belmont-shore'].map((image, index) => (
                     <CarouselItem key={index}>
                       <img 
-                        src="/placeholder.svg" 
+                        src={image} 
                         alt={`Belmont Shore Residence - Image ${index + 1}`} 
                         className="w-full h-48 object-cover rounded"
                       />
@@ -117,7 +134,6 @@ const LongBeachProperties = () => {
           </Card>
         </div>
 
-        {/* SEO Content Section */}
         <div className="prose max-w-none mb-16">
           <h2 className="text-3xl font-semibold mb-6 text-amber-900">
             Furnished Rentals in Long Beach, CA: Coastal Living Made Easy
