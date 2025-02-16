@@ -1,11 +1,24 @@
 
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
-import { Building2, Briefcase } from "lucide-react";
+import { Building2 } from "lucide-react";
+import Header from "@/components/home/Header";
+import Footer from "@/components/home/Footer";
+import {
+  Carousel,
+  CarouselContent,
+  CarouselItem,
+  CarouselNext,
+  CarouselPrevious,
+} from "@/components/ui/carousel";
+import { useNavigate } from "react-router-dom";
 
 const BurbankProperties = () => {
+  const navigate = useNavigate();
+
   return (
     <div className="min-h-screen bg-white pt-24">
+      <Header />
       <div className="container mx-auto px-4">
         <h1 className="text-4xl font-bold mb-8 text-amber-900">Burbank Properties</h1>
         <p className="text-xl mb-8 text-amber-800">
@@ -15,16 +28,29 @@ const BurbankProperties = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
           <Card className="border-amber-100">
             <CardContent className="p-6">
-              <img 
-                src="/placeholder.svg" 
-                alt="Media District Suite" 
-                className="w-full h-48 object-cover mb-4 rounded"
-              />
+              <Carousel className="w-full mb-4">
+                <CarouselContent>
+                  {[1, 2, 3].map((_, index) => (
+                    <CarouselItem key={index}>
+                      <img 
+                        src="/placeholder.svg" 
+                        alt={`Media District Suite - Image ${index + 1}`} 
+                        className="w-full h-48 object-cover rounded"
+                      />
+                    </CarouselItem>
+                  ))}
+                </CarouselContent>
+                <CarouselPrevious />
+                <CarouselNext />
+              </Carousel>
               <h3 className="text-2xl font-semibold mb-2 text-amber-900">Media District Suite</h3>
               <p className="text-amber-700 mb-4">
                 Walking distance to major studios. Fully furnished 2-bedroom luxury apartment.
               </p>
-              <Button className="w-full bg-amber-600 hover:bg-amber-700 text-white">
+              <Button 
+                className="w-full bg-amber-600 hover:bg-amber-700 text-white"
+                onClick={() => navigate('/properties/burbank/media-district')}
+              >
                 View Details
               </Button>
             </CardContent>
@@ -32,16 +58,29 @@ const BurbankProperties = () => {
 
           <Card className="border-amber-100">
             <CardContent className="p-6">
-              <img 
-                src="/placeholder.svg" 
-                alt="Downtown Burbank Residence" 
-                className="w-full h-48 object-cover mb-4 rounded"
-              />
+              <Carousel className="w-full mb-4">
+                <CarouselContent>
+                  {[1, 2, 3].map((_, index) => (
+                    <CarouselItem key={index}>
+                      <img 
+                        src="/placeholder.svg" 
+                        alt={`Downtown Burbank Residence - Image ${index + 1}`} 
+                        className="w-full h-48 object-cover rounded"
+                      />
+                    </CarouselItem>
+                  ))}
+                </CarouselContent>
+                <CarouselPrevious />
+                <CarouselNext />
+              </Carousel>
               <h3 className="text-2xl font-semibold mb-2 text-amber-900">Downtown Burbank Residence</h3>
               <p className="text-amber-700 mb-4">
                 Heart of downtown. Modern 1-bedroom with city views and premium amenities.
               </p>
-              <Button className="w-full bg-amber-600 hover:bg-amber-700 text-white">
+              <Button 
+                className="w-full bg-amber-600 hover:bg-amber-700 text-white"
+                onClick={() => navigate('/properties/burbank/downtown-burbank')}
+              >
                 View Details
               </Button>
             </CardContent>
@@ -49,16 +88,29 @@ const BurbankProperties = () => {
 
           <Card className="border-amber-100">
             <CardContent className="p-6">
-              <img 
-                src="/placeholder.svg" 
-                alt="Magnolia Park Suite" 
-                className="w-full h-48 object-cover mb-4 rounded"
-              />
+              <Carousel className="w-full mb-4">
+                <CarouselContent>
+                  {[1, 2, 3].map((_, index) => (
+                    <CarouselItem key={index}>
+                      <img 
+                        src="/placeholder.svg" 
+                        alt={`Magnolia Park Suite - Image ${index + 1}`} 
+                        className="w-full h-48 object-cover rounded"
+                      />
+                    </CarouselItem>
+                  ))}
+                </CarouselContent>
+                <CarouselPrevious />
+                <CarouselNext />
+              </Carousel>
               <h3 className="text-2xl font-semibold mb-2 text-amber-900">Magnolia Park Suite</h3>
               <p className="text-amber-700 mb-4">
                 Quiet residential area. Spacious 3-bedroom perfect for families.
               </p>
-              <Button className="w-full bg-amber-600 hover:bg-amber-700 text-white">
+              <Button 
+                className="w-full bg-amber-600 hover:bg-amber-700 text-white"
+                onClick={() => navigate('/properties/burbank/magnolia-park')}
+              >
                 View Details
               </Button>
             </CardContent>
@@ -94,6 +146,7 @@ const BurbankProperties = () => {
           </div>
         </div>
       </div>
+      <Footer />
     </div>
   );
 };
