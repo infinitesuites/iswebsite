@@ -44,12 +44,11 @@ const ContactForm = () => {
   async function onSubmit(values: z.infer<typeof formSchema>) {
     setIsSubmitting(true);
     try {
-      // Initialize EmailJS with your public key
       emailjs.init("YOUR_PUBLIC_KEY");
 
       await emailjs.send(
-        "YOUR_SERVICE_ID", // EmailJS service ID
-        "YOUR_TEMPLATE_ID", // EmailJS template ID
+        "YOUR_SERVICE_ID",
+        "YOUR_TEMPLATE_ID",
         {
           from_name: values.name,
           from_email: values.email,
