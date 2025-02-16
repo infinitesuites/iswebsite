@@ -1,3 +1,4 @@
+
 import { zodResolver } from "@hookform/resolvers/zod";
 import { useForm } from "react-hook-form";
 import * as z from "zod";
@@ -15,6 +16,8 @@ import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import Header from "@/components/home/Header";
 import Footer from "@/components/home/Footer";
+import emailjs from '@emailjs/browser';
+import { useState } from "react";
 
 const formSchema = z.object({
   name: z.string().min(2, "Name must be at least 2 characters"),
@@ -25,6 +28,8 @@ const formSchema = z.object({
 });
 
 const ContactForm = () => {
+  const [isSubmitting, setIsSubmitting] = useState(false);
+
   const form = useForm<z.infer<typeof formSchema>>({
     resolver: zodResolver(formSchema),
     defaultValues: {
@@ -36,12 +41,41 @@ const ContactForm = () => {
     },
   });
 
-  function onSubmit(values: z.infer<typeof formSchema>) {
-    toast({
-      title: "Inquiry Submitted",
-      description: "We'll get back to you as soon as possible.",
-    });
-    console.log(values);
+  async function onSubmit(values: z.infer<typeof formSchema>) {
+    setIsSubmitting(true);
+    try {
+      // Initialize EmailJS with your public key
+      emailjs.init("YOUR_PUBLIC_KEY");
+
+      await emailjs.send(
+        "YOUR_SERVICE_ID", // EmailJS service ID
+        "YOUR_TEMPLATE_ID", // EmailJS template ID
+        {
+          from_name: values.name,
+          from_email: values.email,
+          phone: values.phone,
+          location: values.location,
+          message: values.message,
+          to_name: "INFINITE SUITES",
+        }
+      );
+
+      toast({
+        title: "Inquiry Submitted",
+        description: "Thank you for your message. We'll get back to you soon!",
+      });
+
+      form.reset();
+    } catch (error) {
+      console.error("Error sending email:", error);
+      toast({
+        title: "Error",
+        description: "There was a problem sending your message. Please try again.",
+        variant: "destructive",
+      });
+    } finally {
+      setIsSubmitting(false);
+    }
   }
 
   return (
@@ -137,8 +171,12 @@ const ContactForm = () => {
                 )}
               />
 
-              <Button type="submit" className="w-full bg-amber-600 hover:bg-amber-700 text-white">
-                Submit Inquiry
+              <Button 
+                type="submit" 
+                className="w-full bg-amber-600 hover:bg-amber-700 text-white"
+                disabled={isSubmitting}
+              >
+                {isSubmitting ? "Sending..." : "Submit Inquiry"}
               </Button>
             </form>
           </Form>
