@@ -31,9 +31,9 @@ const PropertyDetail = () => {
         • 24/7 building access
         • High-speed internet included`,
         images: [
-          "/src/Images/burbank/media-district/1.jpg",
-          "/src/Images/burbank/media-district/2.jpg",
-          "/src/Images/burbank/media-district/3.jpg"
+          "https://images.unsplash.com/photo-1487958449943-2429e8be8625?w=800",
+          "https://images.unsplash.com/photo-1524230572899-a752b3835840?w=800",
+          "https://images.unsplash.com/photo-1721322800607-8c38375eef04?w=800"
         ],
         price: "Starting at $4,500/month",
         amenities: ["Full Kitchen", "In-unit Laundry", "High-speed Internet", "Dedicated Workspace", "Parking"]

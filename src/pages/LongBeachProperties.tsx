@@ -17,19 +17,19 @@ const LongBeachProperties = () => {
   
   const propertyImages = {
     'downtown-harbor': [
-      "/src/Images/long-beach/downtown-harbor/1.jpg",
-      "/src/Images/long-beach/downtown-harbor/2.jpg",
-      "/src/Images/long-beach/downtown-harbor/3.jpg"
+      "https://images.unsplash.com/photo-1487958449943-2429e8be8625?w=800",
+      "https://images.unsplash.com/photo-1524230572899-a752b3835840?w=800",
+      "https://images.unsplash.com/photo-1721322800607-8c38375eef04?w=800"
     ],
     'shoreline': [
-      "/src/Images/long-beach/shoreline/1.jpg",
-      "/src/Images/long-beach/shoreline/2.jpg",
-      "/src/Images/long-beach/shoreline/3.jpg"
+      "https://images.unsplash.com/photo-1487958449943-2429e8be8625?w=800",
+      "https://images.unsplash.com/photo-1524230572899-a752b3835840?w=800",
+      "https://images.unsplash.com/photo-1721322800607-8c38375eef04?w=800"
     ],
     'belmont-shore': [
-      "/src/Images/long-beach/belmont-shore/1.jpg",
-      "/src/Images/long-beach/belmont-shore/2.jpg",
-      "/src/Images/long-beach/belmont-shore/3.jpg"
+      "https://images.unsplash.com/photo-1487958449943-2429e8be8625?w=800",
+      "https://images.unsplash.com/photo-1524230572899-a752b3835840?w=800",
+      "https://images.unsplash.com/photo-1721322800607-8c38375eef04?w=800"
     ]
   };
 
