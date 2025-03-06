@@ -1,3 +1,4 @@
+
 import { useParams } from "react-router-dom";
 import Header from "@/components/home/Header";
 import Footer from "@/components/home/Footer";
@@ -14,22 +15,37 @@ const BlogPost = () => {
         <h2>Finding Your Perfect Location in the Entertainment Capital</h2>
         <p>Burbank is renowned as the entertainment capital, hosting major industry leaders such as Warner Bros., Disney, and Netflix. Finding the perfect neighborhood here can significantly enhance your professional and personal life. Here are the best areas in Burbank tailored specifically for entertainment professionals:</p>
         
+        <div class="my-8">
+          <img src="https://images.unsplash.com/photo-1572120360610-d971b9d7767c?ixlib=rb-1.2.1&auto=format&fit=crop&w=1200&q=80" alt="Media District in Burbank" class="w-full h-auto rounded-lg shadow-md" />
+        </div>
         <h3>1. Media District</h3>
         <p>The Media District is the vibrant heart of Burbank's entertainment sector. Home to major studios, production houses, and broadcasting companies, this neighborhood offers unparalleled convenience for industry professionals. Upscale apartments, condos, and townhouses provide comfortable living close to work, minimizing commute times.</p>
         <p><strong>Best suited for:</strong> Studio executives, producers, directors, actors, and creative professionals who value convenience and vibrant urban amenities.</p>
         
+        <div class="my-8">
+          <img src="https://images.unsplash.com/photo-1581892464834-ce66db7e3e3d?ixlib=rb-1.2.1&auto=format&fit=crop&w=1200&q=80" alt="Downtown Burbank" class="w-full h-auto rounded-lg shadow-md" />
+        </div>
         <h3>2. Downtown Burbank</h3>
         <p>Downtown Burbank is ideal for professionals seeking a dynamic lifestyle with abundant dining, shopping, and entertainment options right outside their door. Residential options range from trendy apartments to luxury condos, all within walking distance to local amenities, nightlife, and entertainment venues.</p>
         <p><strong>Best suited for:</strong> Young professionals, creative freelancers, and anyone desiring a lively work-life balance.</p>
         
+        <div class="my-8">
+          <img src="https://images.unsplash.com/photo-1560518883-ce09059eeffa?ixlib=rb-1.2.1&auto=format&fit=crop&w=1200&q=80" alt="Magnolia Park in Burbank" class="w-full h-auto rounded-lg shadow-md" />
+        </div>
         <h3>3. Magnolia Park</h3>
         <p>Magnolia Park stands out with its charming vintage shops, independent cafes, and cozy, neighborhood atmosphere. While quieter, it remains conveniently close to major entertainment studios. This neighborhood provides a sense of community often sought after by industry professionals seeking a balance of tranquility and connectivity.</p>
         <p><strong>Best suited for:</strong> Writers, actors, and creative professionals looking for a laid-back lifestyle with easy studio access.</p>
         
+        <div class="my-8">
+          <img src="https://images.unsplash.com/photo-1512917774080-9991f1c4c750?ixlib=rb-1.2.1&auto=format&fit=crop&w=1200&q=80" alt="Rancho District in Burbank" class="w-full h-auto rounded-lg shadow-md" />
+        </div>
         <h3>4. Rancho District</h3>
         <p>The upscale Rancho District offers larger homes, spacious yards, and a serene residential atmosphere. This neighborhood caters to executives, established professionals, and those desiring privacy, space, and a quieter lifestyle, away from the bustling city center.</p>
         <p><strong>Best suited for:</strong> High-level executives, established industry professionals, and families prioritizing privacy and comfort.</p>
         
+        <div class="my-8">
+          <img src="https://images.unsplash.com/photo-1560518883-5060966a4723?ixlib=rb-1.2.1&auto=format&fit=crop&w=1200&q=80" alt="NoHo Adjacent area" class="w-full h-auto rounded-lg shadow-md" />
+        </div>
         <h3>5. NoHo Adjacent</h3>
         <p>Situated on the border between Burbank and North Hollywood, NoHo Adjacent offers the best of both worlds. Professionals have easy access to Burbank's studios and NoHo's lively arts district, renowned theaters, and vibrant nightlife.</p>
         <p><strong>Best suited for:</strong> Creative professionals, actors, and performers who appreciate cultural vibrancy and convenient studio proximity.</p>
