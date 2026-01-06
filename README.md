@@ -1,11 +1,17 @@
-<div align="center">
 
-<img width="1200" height="475" alt="GHBanner" src="https://github.com/user-attachments/assets/0aa67016-6eaf-458a-adb2-6e31a0763ed6" />
+# INFINITE SUITES - Premium Corporate Housing
 
-  <h1>Built with AI Studio</h2>
+A high-end UI/UX implementation for a Corporate Housing company, featuring AI-powered executive assistance via Gemini.
 
-  <p>The fastest path from prompt to production with Gemini.</p>
+## Features
+- **Next.js App Router**: Optimized for SEO and performance.
+- **Gemini Live API**: Real-time voice interaction with "Jessica L", a senior executive agent.
+- **Tailwind CSS**: Stunning, responsive professional design.
+- **Dynamic Routing**: SEO-friendly pages for Markets (LA, Burbank, Long Beach) and Solutions.
 
-  <a href="https://aistudio.google.com/apps">Start building</a>
+## Deployment
+This project is optimized for deployment on [Vercel](https://vercel.com).
 
-</div>
+1. Push to GitHub.
+2. Connect Repo to Vercel.
+3. Add `API_KEY` (Gemini) to Environment Variables.

@@ -1,0 +1,7 @@
+{
+  "name": "Infinite Suites",
+  "description": "Premium corporate housing solutions in Long Beach, Burbank, and LA.",
+  "requestFramePermissions": [
+    "microphone"
+  ]
+}
