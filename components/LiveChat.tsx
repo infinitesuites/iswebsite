@@ -1,4 +1,3 @@
-
 'use client';
 import React, { useState, useRef, useEffect } from 'react';
 import { Mic, X, MessageSquare, Loader2, Volume2, Power } from 'lucide-react';
@@ -210,9 +209,9 @@ const LiveChat: React.FC = () => {
             }
 
             if (message.serverContent?.interrupted) {
-              for (const source of sourcesRef.current) {
+              sourcesRef.current.forEach((source) => {
                 try { source.stop(); } catch (e) {}
-              }
+              });
               sourcesRef.current.clear();
               nextStartTimeRef.current = audioContextRef.current?.currentTime || 0;
               setAgentState('listening');
