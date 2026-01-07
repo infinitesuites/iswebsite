@@ -34,10 +34,12 @@ export const editImageWithGemini = async (
       },
     });
 
-    // Iterate through parts to find the image output
-    if (response.candidates && response.candidates[0].content.parts) {
-      for (const part of response.candidates[0].content.parts) {
-        if (part.inlineData && part.inlineData.data) {
+    // Iterate through parts to find the image output using optional chaining
+    const parts = response.candidates?.[0]?.content?.parts;
+    
+    if (parts) {
+      for (const part of parts) {
+        if (part.inlineData?.data) {
           return `data:${part.inlineData.mimeType || 'image/png'};base64,${part.inlineData.data}`;
         }
       }
