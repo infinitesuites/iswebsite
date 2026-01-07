@@ -1,4 +1,4 @@
 
-// This file is deprecated. The project has migrated to Next.js.
-// Kept as a placeholder to overwrite the existing file and prevent import errors.
+// This file is deprecated. The project uses Next.js.
+// It is kept empty to prevent Vercel from misidentifying the framework as Vite.
 export default {};

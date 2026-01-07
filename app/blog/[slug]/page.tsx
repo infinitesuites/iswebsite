@@ -4,6 +4,12 @@ import { blogPosts } from "@/data/siteData";
 import { notFound } from "next/navigation";
 import { Metadata } from "next";
 
+export async function generateStaticParams() {
+  return blogPosts.map((post) => ({
+    slug: post.slug,
+  }));
+}
+
 export async function generateMetadata({ params }: { params: { slug: string } }): Promise<Metadata> {
   const post = blogPosts.find(p => p.slug === params.slug);
   return {

@@ -4,6 +4,12 @@ import { solutionMarketData } from "@/data/siteData";
 import { notFound } from "next/navigation";
 import { Metadata } from "next";
 
+export async function generateStaticParams() {
+  return Object.values(solutionMarketData).map((solution) => ({
+    slug: solution.slug,
+  }));
+}
+
 export async function generateMetadata({ params }: { params: { slug: string } }): Promise<Metadata> {
   const solution = Object.values(solutionMarketData).find(s => s.slug === params.slug);
   return {
