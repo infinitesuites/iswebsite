@@ -1,7 +1,7 @@
 
 # INFINITE SUITES - Premium Corporate Housing
 
-A high-end UI/UX implementation for a Corporate Housing company, featuring AI-powered executive assistance via Gemini.
+An Corporate Housing company servicing Los Angeles, Burbank, and Long Beach in Southern California.
 
 ## Features
 - **Next.js App Router**: Optimized for SEO and performance.
